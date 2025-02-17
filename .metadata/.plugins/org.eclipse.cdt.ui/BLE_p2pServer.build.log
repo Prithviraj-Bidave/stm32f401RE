@@ -1,0 +1,7 @@
+12:56:03 **** Build of configuration Debug for project BLE_p2pServer ****
+make -j12 all 
+Utilities/subdir.mk:28: *** unable to generate command line.  Stop.
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+12:56:04 Build Failed. 1 errors, 0 warnings. (took 1s.114ms)
+

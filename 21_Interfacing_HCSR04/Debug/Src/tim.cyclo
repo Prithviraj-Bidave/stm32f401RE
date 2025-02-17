@@ -1,0 +1,4 @@
+C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+../Src/tim.c:20:6:tim2_1hz_init	1
+../Src/tim.c:73:6:tim3_pa6_input_capture	1
+../Src/tim.c:108:6:tim3_pa7_input_capture	1

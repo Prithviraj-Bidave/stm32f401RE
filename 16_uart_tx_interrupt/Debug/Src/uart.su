@@ -1,0 +1,9 @@
+C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+../Src/uart.c:20:5:__io_putchar	16	static
+../Src/uart.c:27:6:uart2_rx_interrupt_init	8	static
+../Src/uart.c:67:6:uart2_rxtx_init	8	static
+../Src/uart.c:103:6:uart2_tx_init	8	static
+../Src/uart.c:131:6:uart2_read	4	static
+../Src/uart.c:139:6:uart2_write	16	static
+../Src/uart.c:147:13:uart_set_baudrate	24	static
+../Src/uart.c:152:17:compute_uart_bd	16	static

@@ -1,0 +1,19 @@
+23:59:54 **** Incremental Build of configuration Debug for project 4_gpio_input ****
+make -j12 all 
+arm-none-eabi-gcc -o "4_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Prithviraj\OneDrive\Desktop\stm32f4-BareMetal_Workspace\4_gpio_input\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_gpio_input.elf
+ 
+arm-none-eabi-size  4_gpio_input.elf 
+arm-none-eabi-objdump -h -S 4_gpio_input.elf  > "4_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    784	      0	   1568	   2352	    930	4_gpio_input.elf
+arm-none-eabi-objcopy  -O binary 4_gpio_input.elf  "4_gpio_input.bin"
+Finished building: default.size.stdout
+ 
+Finished building: 4_gpio_input.list
+Finished building: 4_gpio_input.bin
+ 
+ 
+
+23:59:56 Build Finished. 0 errors, 0 warnings. (took 1s.310ms)
+
