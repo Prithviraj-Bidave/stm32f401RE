@@ -25,8 +25,8 @@ int main(void)
 
 	while(1)
 	{
-		while(!(TIM2->SR & SR_UIF));
-		TIM2->SR &=~SR_UIF;
+//		while(!(TIM2->SR & SR_UIF));
+//		TIM2->SR &=~SR_UIF;
 		printf("A second passed!!\n\r");
 		GPIOA->ODR ^= LED_PIN;
 	}

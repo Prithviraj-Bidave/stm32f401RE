@@ -1,2 +1,0 @@
-../Src/systick.c:8:6:systickDelayMicroSec	24	static
-../Src/systick.c:27:6:systickDelayMs	24	static

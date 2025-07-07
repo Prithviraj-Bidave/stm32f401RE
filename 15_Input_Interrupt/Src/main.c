@@ -24,9 +24,9 @@ int main(void)
 
 	while(1)
 	{
-		while(!(TIM2->SR & SR_UIF));
-		TIM2->SR &=~SR_UIF;
-		GPIOA->ODR ^= (1U<<5);
+//		while(!(TIM2->SR & SR_UIF));
+//		TIM2->SR &=~SR_UIF;
+//		GPIOA->ODR ^= (1U<<5);
 
 	}
 }

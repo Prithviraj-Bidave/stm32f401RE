@@ -14,19 +14,20 @@ int main(void)
 
 	GPIOA->MODER &=~(1U<<11);
 	GPIOA->MODER |= (1U<<10);
-
+	GPIOA->MODER &=~(1U<<13);
+	GPIOA->MODER |= (1U<<12);
 
 	while(1)
 	{
 		key = uart2_read();
 		if(key == 's')
 		{
-			GPIOA->ODR |= LED_PIN;
+			GPIOA->BSRR = LED_PIN;
 			printf("Input: s");
 		}
 		else if(key == 'h')
 		{
-			GPIOA->ODR &=~LED_PIN;
+			GPIOA->BSRR = (1U<<6);
 			printf("Input: h");
 		}
 		else{}

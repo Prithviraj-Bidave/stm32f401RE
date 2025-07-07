@@ -1,0 +1,10 @@
+19:12:13 **** Incremental Build of configuration Debug for project ujjwal_pbl ****
+make -j12 all 
+arm-none-eabi-size  ujjwal_pbl.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15500	    456	   1912	  17868	   45cc	ujjwal_pbl.elf
+Finished building: default.size.stdout
+ 
+
+19:12:14 Build Finished. 0 errors, 0 warnings. (took 1s.28ms)
+

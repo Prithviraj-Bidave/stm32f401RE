@@ -1,0 +1,10 @@
+13:39:28 **** Incremental Build of configuration Debug for project Input_Capture_BothEdges ****
+make -j12 all 
+arm-none-eabi-size  Input_Capture_BothEdges.elf 
+   text	   data	    bss	    dec	    hex	filename
+    848	      0	   1568	   2416	    970	Input_Capture_BothEdges.elf
+Finished building: default.size.stdout
+ 
+
+13:39:28 Build Finished. 0 errors, 0 warnings. (took 144ms)
+

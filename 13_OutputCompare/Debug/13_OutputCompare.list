@@ -10,9 +10,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
   2 .rodata       00000000  08000344  0800034c  0000134c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   3 .ARM.extab    00000000  08000344  08000344  0000134c  2**0
-                  CONTENTS
+                  CONTENTS, READONLY
   4 .ARM          00000000  08000344  08000344  0000134c  2**0
-                  CONTENTS
+                  CONTENTS, READONLY
   5 .preinit_array 00000000  08000344  0800034c  0000134c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   6 .init_array   00000004  08000344  08000344  00001344  2**2
@@ -35,17 +35,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_rnglists 00000046  00000000  00000000  000019f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00000e69  00000000  00000000  00001a3e  2**0
+ 16 .debug_macro  00000e8c  00000000  00000000  00001a3e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00000e56  00000000  00000000  000028a7  2**0
+ 17 .debug_line   00000e1c  00000000  00000000  000028ca  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00052b93  00000000  00000000  000036fd  2**0
+ 18 .debug_str    00052c40  00000000  00000000  000036e6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00056290  2**0
+ 19 .comment      00000043  00000000  00000000  00056326  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000000a8  00000000  00000000  000562d4  2**2
+ 20 .debug_frame  000000a8  00000000  00000000  0005636c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000087  00000000  00000000  0005637c  2**0
+ 21 .debug_line_str 00000061  00000000  00000000  00056414  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -159,45 +159,46 @@ void tim2_pa5_output_compare(void)
  8000242:	6413      	str	r3, [r2, #64]	@ 0x40
 
 	/*Set the prescaler value*/
-	TIM2->PSC = 1600 - 1;
+	TIM2->PSC = 2 - 1;
  8000244:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
- 8000248:	f240 623f 	movw	r2, #1599	@ 0x63f
- 800024c:	629a      	str	r2, [r3, #40]	@ 0x28
+ 8000248:	2201      	movs	r2, #1
+ 800024a:	629a      	str	r2, [r3, #40]	@ 0x28
 	/*Set auto-reload value*/
-	TIM2->ARR = 200 - 1;
- 800024e:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
- 8000252:	22c7      	movs	r2, #199	@ 0xc7
- 8000254:	62da      	str	r2, [r3, #44]	@ 0x2c
+	TIM2->ARR = 2 - 1;
+ 800024c:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
+ 8000250:	2201      	movs	r2, #1
+ 8000252:	62da      	str	r2, [r3, #44]	@ 0x2c
 
 	/*Set output compare toggle mode*/
 	TIM2->CCMR1 = OC_TOGGLE;
- 8000256:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
- 800025a:	2230      	movs	r2, #48	@ 0x30
- 800025c:	619a      	str	r2, [r3, #24]
+ 8000254:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
+ 8000258:	2230      	movs	r2, #48	@ 0x30
+ 800025a:	619a      	str	r2, [r3, #24]
 	/*Enable tim2 ch1 in compare mode*/
 	TIM2->CCER |= CCER_CC1E;
- 800025e:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
- 8000262:	6a1b      	ldr	r3, [r3, #32]
- 8000264:	f04f 4280 	mov.w	r2, #1073741824	@ 0x40000000
- 8000268:	f043 0301 	orr.w	r3, r3, #1
- 800026c:	6213      	str	r3, [r2, #32]
+ 800025c:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
+ 8000260:	6a1b      	ldr	r3, [r3, #32]
+ 8000262:	f04f 4280 	mov.w	r2, #1073741824	@ 0x40000000
+ 8000266:	f043 0301 	orr.w	r3, r3, #1
+ 800026a:	6213      	str	r3, [r2, #32]
 
 
 	/*Clear counter*/
 	TIM2->CNT = 0;
- 800026e:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
- 8000272:	2200      	movs	r2, #0
- 8000274:	625a      	str	r2, [r3, #36]	@ 0x24
+ 800026c:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
+ 8000270:	2200      	movs	r2, #0
+ 8000272:	625a      	str	r2, [r3, #36]	@ 0x24
 	/*Enable timer*/
 	TIM2->CR1 = CR1_CEN;
- 8000276:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
- 800027a:	2201      	movs	r2, #1
- 800027c:	601a      	str	r2, [r3, #0]
+ 8000274:	f04f 4380 	mov.w	r3, #1073741824	@ 0x40000000
+ 8000278:	2201      	movs	r2, #1
+ 800027a:	601a      	str	r2, [r3, #0]
 }
- 800027e:	bf00      	nop
- 8000280:	46bd      	mov	sp, r7
- 8000282:	f85d 7b04 	ldr.w	r7, [sp], #4
- 8000286:	4770      	bx	lr
+ 800027c:	bf00      	nop
+ 800027e:	46bd      	mov	sp, r7
+ 8000280:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000284:	4770      	bx	lr
+ 8000286:	bf00      	nop
  8000288:	40023800 	.word	0x40023800
  800028c:	40020000 	.word	0x40020000
 

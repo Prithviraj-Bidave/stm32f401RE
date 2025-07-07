@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;4_WorkingWithITM-printf_logs/Src/sw0.c&apos; to &apos;swo.c&apos;" description="Rename resource &apos;sw0.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/sw0.c" name="swo.c" stamp="1745450014534" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;4_WorkingWithITM-printf_logs/Inc/sw0.h&apos; to &apos;swo.h&apos;" description="Rename resource &apos;sw0.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/sw0.h" name="swo.h" stamp="1745450041483" updateReferences="true"/>
+</session>

@@ -43,9 +43,9 @@ void tim2_pa5_output_compare(void)
 	RCC->APB1ENR |= TIM2EN;
 
 	/*Set the prescaler value*/
-	TIM2->PSC = 1600 - 1;
+	TIM2->PSC = 2 - 1;
 	/*Set auto-reload value*/
-	TIM2->ARR = 200 - 1;
+	TIM2->ARR = 2 - 1;
 
 	/*Set output compare toggle mode*/
 	TIM2->CCMR1 = OC_TOGGLE;

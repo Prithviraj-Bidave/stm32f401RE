@@ -1,3 +1,0 @@
-../Src/main.c:22:5:main	1
-../Src/main.c:39:13:tim2_callback	1
-../Src/main.c:46:6:TIM2_IRQHandler	1

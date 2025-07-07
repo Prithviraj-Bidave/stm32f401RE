@@ -1,1 +1,5 @@
-../Src/main.c:9:5:main	3
+../Src/main.c:6:6:tim2_pwm_init	1
+../Src/main.c:43:6:adc_init	1
+../Src/main.c:66:6:adc_start_conversion	1
+../Src/main.c:71:10:adc_read_channel	2
+../Src/main.c:87:5:main	1

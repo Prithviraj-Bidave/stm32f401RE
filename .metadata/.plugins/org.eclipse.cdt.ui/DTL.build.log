@@ -1,0 +1,16 @@
+13:39:27 **** Build of configuration Debug for project DTL ****
+make -j12 all 
+arm-none-eabi-gcc -o "DTL.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\C drive\stm32f4-BareMetal_Workspace\DTL\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DTL.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DTL.elf
+ 
+arm-none-eabi-size  DTL.elf 
+arm-none-eabi-objdump -h -S DTL.elf  > "DTL.list"
+   text	   data	    bss	    dec	    hex	filename
+   8732	     92	   1968	  10792	   2a28	DTL.elf
+Finished building: default.size.stdout
+ 
+Finished building: DTL.list
+ 
+
+13:39:28 Build Finished. 0 errors, 0 warnings. (took 667ms)
+

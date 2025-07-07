@@ -45,8 +45,8 @@
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths.1917245881" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../Inc"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Users\Prithviraj\OneDrive\Desktop\stm32f4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\F4_chip_headers\CMSIS\Device\ST\STM32F4xx\Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\Users\Prithviraj\OneDrive\Desktop\stm32f4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\F4_chip_headers\CMSIS\Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Users\Prithviraj\Desktop\stm32f4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\F4_chip_headers\CMSIS\Device\ST\STM32F4xx\Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Users\Prithviraj\Desktop\stm32f4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\STM32F4-BareMetal_Workspace\F4_chip_headers\CMSIS\Include&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.2111810942" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -170,5 +170,12 @@
 			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/13_OutputCompare"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/13_OutputCompare"/>
+		</configuration>
+	</storageModule>
 </cproject>

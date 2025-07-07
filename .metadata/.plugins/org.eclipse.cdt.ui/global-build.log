@@ -1,15 +1,34 @@
-03:45:36 **** Build of configuration Debug for project 9_adc_single_conversion ****
+15:23:39 **** Incremental Build of configuration Debug for project adc_dma ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "9_adc_single_conversion.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Prithviraj\OneDrive\Desktop\stm32f4-BareMetal_Workspace\9_adc_single_conversion\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9_adc_single_conversion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 9_adc_single_conversion.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:33: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  127 |   if (HAL_ADC_Start_DMA(&hadc1, adc_values, 2) != HAL_OK) {
+      |                                 ^~~~~~~~~~
+      |                                 |
+      |                                 uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef *hadc, uint32_t *pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "adc_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\C drive\stm32f4-BareMetal_Workspace\adc_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="adc_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: adc_dma.elf
  
-arm-none-eabi-size  9_adc_single_conversion.elf 
-arm-none-eabi-objdump -h -S 9_adc_single_conversion.elf  > "9_adc_single_conversion.list"
+arm-none-eabi-size  adc_dma.elf 
+arm-none-eabi-objdump -h -S adc_dma.elf  > "adc_dma.list"
    text	   data	    bss	    dec	    hex	filename
-   5352	     92	   1908	   7352	   1cb8	9_adc_single_conversion.elf
+  16292	    108	   2156	  18556	   487c	adc_dma.elf
 Finished building: default.size.stdout
  
-Finished building: 9_adc_single_conversion.list
+Finished building: adc_dma.list
+ 
+15:23:42 **** Incremental Build of configuration Debug for project adc_dma ****
+make -j12 all 
+arm-none-eabi-size  adc_dma.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16292	    108	   2156	  18556	   487c	adc_dma.elf
+Finished building: default.size.stdout
  

@@ -1,0 +1,6 @@
+1749493558635	Delete resource '6_uart_printf/Debug'
+1749514068395	Delete resource '21_I2C/Src/i2c.h'
+1749514173396	Delete resource '10_adc_continuous_conversion/Src/i2c.c'
+1749514177481	Delete resource '10_adc_continuous_conversion/Src/adxl345.c'
+1749514180458	Delete resource '10_adc_continuous_conversion/Inc/adxl345.h'
+1749514183122	Delete resource '10_adc_continuous_conversion/Inc/i2c.h'

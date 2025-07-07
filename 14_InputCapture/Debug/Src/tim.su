@@ -1,3 +1,5 @@
 ../Src/tim.c:14:6:tim2_1hz_init	4	static
 ../Src/tim.c:31:6:tim2_pa5_output_compare	4	static
 ../Src/tim.c:67:6:tim3_pa6_input_capture	4	static
+../Src/tim.c:107:6:tim3_pa6_pa7_input_capture	4	static
+../Src/tim.c:160:6:tim2_pa5_pa1_output_compare	4	static

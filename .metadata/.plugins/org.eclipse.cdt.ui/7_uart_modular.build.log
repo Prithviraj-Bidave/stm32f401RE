@@ -1,10 +1,20 @@
-00:53:29 **** Incremental Build of configuration Debug for project 7_uart_modular ****
+13:39:26 **** Incremental Build of configuration Debug for project 7_uart_modular ****
 make -j12 all 
-arm-none-eabi-size  7_uart_modular.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5164	     92	   1900	   7156	   1bf4	7_uart_modular.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Prithviraj/OneDrive/Desktop/stm32f4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/STM32F4-BareMetal_Workspace/F4_chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/main.c:2:10: fatal error: stm32f4xx.h: No such file or directory
+    2 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Src/uart.c:1:
+../Inc/uart.h:4:10: fatal error: stm32f4xx.h: No such file or directory
+    4 | #include "stm32f4xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-00:53:29 Build Finished. 0 errors, 0 warnings. (took 245ms)
+13:39:26 Build Failed. 5 errors, 0 warnings. (took 208ms)
 
